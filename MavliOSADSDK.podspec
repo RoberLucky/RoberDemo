@@ -21,46 +21,46 @@ Pod::Spec.new do |s|
                       test adsdkdemo desc
                        DESC
 
-  s.homepage         = 'https://github.com/KKMobile/MavlArsenal'
+  s.homepage         = 'https://github.com/RoberLucky/RoberDemo'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'RoberLucky' => 'lyx411326@163.com' }
-  s.source           = { :git => 'https://github.com/KKMobile/MavlArsenal.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/RoberLucky/RoberDemo.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'
 
-  s.source_files = 'Unity/ios_libs/MavliOSADSDK'
+  s.source_files = 'ios_libs/MavliOSADSDK'
   
    s.resource_bundles = {
-     'MavliOSADSDK' => ['Unity/ios_libs/MavliOSADSDK/Assets/*']
+     'MavliOSADSDK' => ['ios_libs/MavliOSADSDK/Assets/*']
    }
    
    s.subspec 'Aps' do |aa|
-   aa.source_files = 'Unity/ios_libs/MavliOSADSDK/Classes/Aps/*'
+   aa.source_files = 'ios_libs/MavliOSADSDK/Classes/Aps/*'
    aa.dependency 'AmazonPublisherServicesMoPubAdapter', '1.2.0'
    aa.dependency 'AmazonPublisherServicesSDK', '3.4.2'
    end
    
    s.subspec 'Mopub-plugin' do |pp|
-   pp.source_files = 'Unity/ios_libs/MavliOSADSDK/Classes/Mopub-plugin/*'
+   pp.source_files = 'ios_libs/MavliOSADSDK/Classes/Mopub-plugin/*'
    end
    
    s.subspec 'Mediation' do |mm|
      mm.subspec 'AppLovin' do |ap|
-       ap.source_files = 'Unity/ios_libs/MavliOSADSDK/Classes/Mediation/AppLovin/Network/*'
+       ap.source_files = 'ios_libs/MavliOSADSDK/Classes/Mediation/AppLovin/Network/*'
        ap.dependency 'AppLovinSDK', '6.14.9'
      end
      mm.subspec 'FaceBook' do |ff|
-       ff.source_files = 'Unity/ios_libs/MavliOSADSDK/Classes/Mediation/FaceBook/NetWork/*'
+       ff.source_files = 'ios_libs/MavliOSADSDK/Classes/Mediation/FaceBook/NetWork/*'
        ff.dependency 'FBAudienceNetwork', '6.2.1'
      end
      mm.subspec 'IronSource' do |ii|
-       ii.source_files = 'Unity/ios_libs/MavliOSADSDK/Classes/Mediation/IronSource/Network/*'
+       ii.source_files = 'ios_libs/MavliOSADSDK/Classes/Mediation/IronSource/Network/*'
        ii.dependency 'IronSourceSDK', '7.0.4.0'
      end
      mm.subspec 'AdMob' do |ad|
-       ad.source_files = 'Unity/ios_libs/MavliOSADSDK/Classes/Mediation/MoPub-AdMob-Adapters/AdMob/*'
+       ad.source_files = 'ios_libs/MavliOSADSDK/Classes/Mediation/MoPub-AdMob-Adapters/AdMob/*'
        ad.dependency 'Google-Mobile-Ads-SDK', '7.68.0'
      end
    end
